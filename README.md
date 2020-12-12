@@ -1,5 +1,5 @@
 # vortex_3d_spinoff
-3D spinoff of a game made by a friend of mine; Cloneos.
+3D spinoff of a game made by a friend of mine; @Cloneos.
 
 This game is made in Unity and to play this version, download the latest release from here.
 
