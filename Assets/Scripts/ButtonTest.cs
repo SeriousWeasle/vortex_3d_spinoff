@@ -4,17 +4,18 @@ using UnityEngine.UI;
 
 public class ButtonTest : MonoBehaviour
 {
-    public Image background;
-    public Text selectedMode;
-    public GameObject[] circles;
+    public Image background; //background color
+    public Text selectedMode; //text displaying diff in center of screen
+    public GameObject[] circles; //array of circles in main menu
 
     private void Start()
     {
-        UpdateMenu(0);
+        UpdateMenu(0); //on start select easy
     }
 
     public void UpdateMenu(int idx)
     {
+        //there probably is a better way to do this, but I am scared of Unity's UI elements so this has to do
         switch(idx)
         {
             case 0: //easy
@@ -37,6 +38,11 @@ public class ButtonTest : MonoBehaviour
                 selectedMode.color = new Color(0f, 0f, 0f);
                 selectedMode.text = "Very Hard";
                 break;
+            case 4: //quit button
+                background.color = new Color(0f, 0f, 0.6f);
+                selectedMode.color = new Color(0f, 0f, 0.4f);
+                selectedMode.text = "Quit game";
+                break;
             default: //default to easy
                 background.color = new Color(0.6f, 0f, 0.6f);
                 selectedMode.color = new Color(0.4f, 0f, 0.4f);
@@ -46,12 +52,12 @@ public class ButtonTest : MonoBehaviour
 
         for (int i = 0; i < circles.Length; i++)
         {
-            if (i == idx)
+            if (i == idx) //if circle corresponds to difficulty
             {
                 circles[i].SetActive(true);
                 print(i);
             }
-            else
+            else //if it does not
             {
                 circles[i].SetActive(false);
             }
@@ -59,21 +65,21 @@ public class ButtonTest : MonoBehaviour
     }
     public void selectEasy()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1); //load scene idx 1 from build settings
     }
 
     public void selectNormal()
     {
-        Debug.Log("selected normal");
+        SceneManager.LoadScene(2); //load scene idx 2 from build settings
     }
 
     public void selectHard()
     {
-        Debug.Log("selected hard");
+        SceneManager.LoadScene(3); //load scene idx 3 from build settings
     }
 
     public void selectVeryHard()
     {
-        Debug.Log("selected very hard");
+        SceneManager.LoadScene(4); //load scene idx 4 from build settings
     }
 }

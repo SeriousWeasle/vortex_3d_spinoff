@@ -1543,7 +1543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b506978b02e37204cbf63fc378f3699a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diff: 0
+  diff: 3
   speedMult: 0.01
   scaleMult: 0.08
   target: {fileID: 1093891340}
@@ -1878,7 +1878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Easy
+  m_Text: Very Hard
 --- !u!222 &1769899659
 CanvasRenderer:
   m_ObjectHideFlags: 0
